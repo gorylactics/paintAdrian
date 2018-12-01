@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  resources :zombie1s
+  resources :zombies
+  root "zombie1s#index"
+  # resources :zombies
+  # root "zombies#index" aca es la ruta de de lo que queremos como raiz
 end

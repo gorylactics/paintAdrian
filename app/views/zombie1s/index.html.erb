@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Zombie1s</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Humanomordido1</th>
+      <th>Integer</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @zombie1s.each do |zombie1| %>
+      <tr>
+        <td><%= zombie1.name %></td>
+        <td><%= zombie1.humanoMordido1 %></td>
+        <td><%= zombie1.integer %></td>
+        <td><%= link_to 'Show', zombie1 %></td>
+        <td><%= link_to 'Edit', edit_zombie1_path(zombie1) %></td>
+        <td><%= link_to 'Destroy', zombie1, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Zombie1', new_zombie1_path %>
